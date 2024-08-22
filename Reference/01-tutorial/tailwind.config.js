@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/01-basics/**/*.{html,js}"],
+  content: ["./src/03-states-and-responsive-design/**/*.{html,js}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -23,6 +24,14 @@ module.exports = {
       listStyleType: {
         upperRoman: "upper-roman",
         "lower-roman": "lower-roman",
+      },
+      spacing: {
+        // 98: "30rem",
+        // 100: "32rem",
+      },
+      screens: {
+        xs: "480px",
+        "3xl": "1600px",
       },
     },
   },
