@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/03-states-and-responsive-design/**/*.{html,js}"],
+  content: ["./src/05-effects-and-transitions/**/*.{html,js}"],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
@@ -32,6 +36,16 @@ module.exports = {
       screens: {
         xs: "480px",
         "3xl": "1600px",
+      },
+      animation: {
+        "slower-spin": "spin 3s linear infinite",
+        scale: "scaler 2s linear infinite",
+      },
+      keyframes: {
+        scaler: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.5)" },
+        },
       },
     },
   },

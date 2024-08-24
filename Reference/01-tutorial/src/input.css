@@ -1,18 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 @tailwind base;
 @tailwind components;
-
-/* @layer base {
-  ul {
-    list-style: revert;
-    padding: revert;
-    margin: revert;
-  }
-} */
-
-/* :root {
-  --roboto: '"Roboto", "sans-serif"';
-} */
-
 @tailwind utilities;
+
+@layer components {
+  .blue-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    color: white;
+    @apply bg-blue-500 rounded-lg;
+  }
+}
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+}
+
+.card {
+  padding: theme(spacing.8);
+  background: theme(colors.red.500);
+  color: theme(colors.white);
+}
+
+@media screen(lg) {
+  /* write your custom styles here */
+}
