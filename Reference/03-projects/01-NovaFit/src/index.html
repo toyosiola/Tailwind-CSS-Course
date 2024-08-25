@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaFit Smartwatch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- MARK: Navigation Bar -->
+    <nav class="absolute z-10 w-full">
+      <div
+        class="max-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
+        <!-- logo -->
+        <div class="select-none text-2xl font-bold">NovaFit</div>
+
+        <!-- nav links -->
+        <ul
+          class="fixed inset-0 hidden flex-col items-center justify-center gap-8 bg-gray-900 text-xl md:static md:flex md:flex-row md:bg-transparent"
+          id="menu"
+        >
+          <li><a href="#features" class="hover:text-teal-400">Features</a></li>
+          <li>
+            <a href="#how-it-works" class="hover:text-teal-400">How it Works</a>
+          </li>
+          <li><a href="#pricing" class="hover:text-teal-400">Pricing</a></li>
+          <li>
+            <a href="#testimonials" class="hover:text-teal-400">Testimonial</a>
+          </li>
+          <li><a href="#faq" class="hover:text-teal-400">FAQ</a></li>
+
+          <!-- close menu btn -->
+          <button class="text-3xl outline-none hover:text-teal-400 md:hidden">
+            &times;
+          </button>
+        </ul>
+
+        <!-- hamburger btn -->
+        <button
+          class="text-3xl outline-none hover:text-teal-400 md:hidden"
+          id="menu-btn"
+        >
+          &#9776;
+        </button>
+      </div>
+    </nav>
+
+    <!-- MARK: Hero Section -->
+    <section
+      class="relative flex min-h-screen items-center justify-center px-6 text-center"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        src="./public/hero-bg-video.mp4"
+        poster="./public/hero-bg-fallback.jpg"
+        class="absolute top-0 h-full w-full object-cover"
+      ></video>
+      <!-- video overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Hero Content -->
+      <div class="relative max-w-2xl">
+        <h1 class="mb-4 text-5xl font-bold">Discover the Future of Fitness</h1>
+        <p class="mb-8 text-xl">
+          Track your health, achieve your goals, and stay connected with NovaFit
+          Smartwatch.
+        </p>
+        <a
+          href="#pricing"
+          class="rounded-full bg-teal-500 px-8 py-3 font-semibold text-white shadow-lg hover:bg-teal-400"
+          >Pre-Order Now</a
+        >
+      </div>
+    </section>
+
+    <!-- MARK: Features -->
+    <section id="features" class="bg-gray-100 py-20 text-gray-900">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <!-- section heading -->
+        <h2 class="mb-12 text-center text-4xl font-bold">Key Features</h2>
+
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/heart-rate.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Heart Rate Monitoring</h3>
+            <p class="text-gray-600">
+              Keep track of your heart rate in real-time with precision sensors
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/gps.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">GPS Tracking</h3>
+            <p class="text-gray-600">
+              Accurate GPS tracking helps you monitor your routes and distances.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/water-resistant.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Water Resistant</h3>
+            <p class="text-gray-600">
+              Keep track of your heart rate in real-time with precision sensors
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/sleep-monitoring.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Sleep Monitoring</h3>
+            <p class="text-gray-600">
+              Analyze your sleep patterns to improve your overall health.
+            </p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/music-control.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Music Control</h3>
+            <p class="text-gray-600">
+              Control your music directly from your wrist, even on the go.
+            </p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="rounded-lg bg-white p-6 text-center shadow-lg">
+            <img
+              src="./public/icons/notifications.svg"
+              alt="Heart rate monitoring"
+              class="mx-auto mb-4 size-16"
+            />
+            <h3 class="mb-2 text-xl font-semibold">Smart Notifications</h3>
+            <p class="text-gray-600">
+              Stay updated with notifications for calls, messages, and apps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: How it Works -->
+    <section class="py-20" id="how-it-works">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="mb-12 text-center text-4xl font-bold">How It Works</h2>
+
+        <!-- steps -->
+        <div class="space-y-12">
+          <!-- step 1 -->
+          <div class="flex flex-col items-center justify-center md:flex-row">
+            <div class="h-80 md:h-64 md:w-1/2">
+              <img
+                src="./public/unbox-and-setup.jpg"
+                alt="Unbox and setup"
+                class="h-full rounded-lg object-cover shadow-lg"
+              />
+            </div>
+            <div class="mt-8 text-center md:mt-0 md:w-1/2 md:text-left">
+              <h3 class="mb-4 text-3xl font-semibold">
+                Step 1: Unbox and Set Up
+              </h3>
+              <p class="max-w-96 text-gray-400">
+                Unbox your NovaFit Smartwatch, follow the easy setup
+                instructions, and pair it with your smartphone via the NovaFit
+                app.
+              </p>
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div
+            class="flex flex-col items-center justify-center md:flex-row-reverse"
+          >
+            <div class="h-80 md:h-64 md:w-1/2">
+              <img
+                src="./public/track-and-achieve.jpg"
+                alt="Unbox and setup"
+                class="h-full rounded-lg object-cover shadow-lg"
+              />
+            </div>
+            <div class="mt-8 text-center md:mt-0 md:w-1/2 md:text-left">
+              <h3 class="mb-4 text-3xl font-semibold">
+                Step 2: Customize and Sync
+              </h3>
+              <p class="max-w-96 text-gray-400">
+                Customize your watch face, sync your favorite apps, and set your
+                fitness goals to personalize your experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="flex flex-col items-center justify-center md:flex-row">
+            <div class="h-80 md:h-64 md:w-1/2">
+              <img
+                src="./public/unbox-and-setup.jpg"
+                alt="Unbox and setup"
+                class="h-full rounded-lg object-cover shadow-lg"
+              />
+            </div>
+            <div class="mt-8 text-center md:mt-0 md:w-1/2 md:text-left">
+              <h3 class="mb-4 text-3xl font-semibold">
+                Step 3: Track and Achieve
+              </h3>
+              <p class="max-w-96 text-gray-400">
+                Use the NovaFit Smartwatch to monitor your workouts, track your
+                progress, and achieve your fitness goals with real-time data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Pricing -->
+    <section id="pricing" class="bg-gray-100 py-20 text-gray-900">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="mb-12 text-center text-4xl font-bold">Choose Your Plan</h2>
+
+        <!-- Pricing grid -->
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Basic plan -->
+          <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+            <h3 class="mb-4 text-2xl font-semibold">Basic</h3>
+            <p class="mb-6 text-gray-600">
+              Essential features for everyday use
+            </p>
+            <p class="mb-6 text-xl font-bold">
+              <span class="text-4xl">$99</span>
+              <span>/month</span>
+            </p>
+
+            <ul class="mb-6 space-y-4 text-gray-600">
+              <li>Heart Rate Monitoring</li>
+              <li>GPS Tracking</li>
+              <li>Water Resistant</li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block rounded-full bg-teal-500 px-6 py-3 text-white shadow-lg duration-300 hover:bg-teal-400"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Standard plan -->
+          <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+            <h3 class="mb-4 text-2xl font-semibold">Standard</h3>
+            <p class="mb-6 text-gray-600">
+              Most popular plan for fitness enthusiasts
+            </p>
+            <p class="mb-6 text-xl font-bold">
+              <span class="text-4xl">$199</span>
+              <span>/month</span>
+            </p>
+
+            <ul class="mb-6 space-y-4 text-gray-600">
+              <li>All Basic Features</li>
+              <li>Sleep Monitoring</li>
+              <li>Music Control</li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block rounded-full bg-teal-500 px-6 py-3 text-white shadow-lg duration-300 hover:bg-teal-400"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Premium plan -->
+          <div class="rounded-lg bg-white p-8 text-center shadow-lg">
+            <h3 class="mb-4 text-2xl font-semibold">Premium</h3>
+            <p class="mb-6 text-gray-600">
+              Advanced features for serious athletes
+            </p>
+            <p class="mb-6 text-xl font-bold">
+              <span class="text-4xl">$299</span>
+              <span>/month</span>
+            </p>
+
+            <ul class="mb-6 space-y-4 text-gray-600">
+              <li>All Standard Features</li>
+              <li>Smart Notifications</li>
+              <li>Personalized Coaching</li>
+            </ul>
+
+            <a
+              href="#"
+              class="inline-block rounded-full bg-teal-500 px-6 py-3 text-white shadow-lg duration-300 hover:bg-teal-400"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Testimonials -->
+    <section id="testimonials" class="py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="mb-12 text-center text-4xl font-bold">
+          What Our Customers Say
+        </h2>
+
+        <!-- Reviews grid -->
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Review 1 -->
+          <div class="rounded-lg bg-gray-800 p-8 text-center shadow-lg">
+            <img
+              src="./public/customer-1.jpg"
+              alt="Customer 1"
+              class="mx-auto mb-4 size-20 rounded-full object-cover"
+            />
+            <h3 class="mb-2 text-2xl font-semibold">John Doe</h3>
+            <p class="mb-4 text-gray-400">
+              "The NovaFIt Smartwatch has completely transformed my workout
+              routine. The GPS tracking is spot-on and the heart rate monitor is
+              super accurate!"
+            </p>
+            <div class="flex justify-center text-yellow-400">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="rounded-lg bg-gray-800 p-8 text-center shadow-lg">
+            <img
+              src="./public/customer-2.jpg"
+              alt="Customer 1"
+              class="mx-auto mb-4 size-20 rounded-full object-cover"
+            />
+            <h3 class="mb-2 text-2xl font-semibold">Jane Smith</h3>
+            <p class="mb-4 text-gray-400">
+              "I love how easy it is to customize the watch face and the
+              notifications help me stay on top of my daily tasks."
+            </p>
+            <div class="flex justify-center text-yellow-400">
+              &#9733;&#9733;&#9733;&#9733;&#9734;
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="rounded-lg bg-gray-800 p-8 text-center shadow-lg">
+            <img
+              src="./public/customer-3.jpg"
+              alt="Customer 1"
+              class="mx-auto mb-4 size-20 rounded-full object-cover"
+            />
+            <h3 class="mb-2 text-2xl font-semibold">Alex Johnson</h3>
+            <p class="mb-4 text-gray-400">
+              "Water resistance is a game changer for me. I can swim and shower
+              without worrying about taking my watch off!"
+            </p>
+            <div class="flex justify-center text-yellow-400">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: FAQ -->
+    <section id="faq" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="mb-12 text-center text-3xl font-bold text-gray-800">
+          Frequently Asked Questions
+        </h2>
+
+        <!-- FAQ Items -->
+        <div>
+          <!-- Question 1 -->
+          <div class="border-b border-gray-200">
+            <button
+              class="faq-question flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 focus:outline-none"
+            >
+              <span
+                >Is the NovaFit Smartwatch compatible with all
+                smartphones?</span
+              >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5 shrink-0 transition-transform duration-300"
+              >
+                <path
+                  d="M19.293 9.293a1 1 0 00-1.414 0L12 14.586 6.121 8.707a1 1 0 00-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-answer max-h-0 overflow-hidden text-gray-600 duration-500"
+            >
+              <p class="px-6 py-4">
+                Yes, NovaFit is compatible with both iOS and Android devices
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="border-b border-gray-200">
+            <button
+              class="faq-question flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 focus:outline-none"
+            >
+              <span>How long does the battery last?</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5 shrink-0 transition-transform duration-300"
+              >
+                <path
+                  d="M19.293 9.293a1 1 0 00-1.414 0L12 14.586 6.121 8.707a1 1 0 00-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-answer max-h-0 overflow-hidden text-gray-600 duration-500"
+            >
+              <p class="px-6 py-4">
+                The battery lasts up to 7 days on a single charge, depending on
+                usage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="border-b border-gray-200">
+            <button
+              class="faq-question flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 focus:outline-none"
+            >
+              <span>Can I wear the NovaFit Smartwatch while swimming?</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5 shrink-0 transition-transform duration-300"
+              >
+                <path
+                  d="M19.293 9.293a1 1 0 00-1.414 0L12 14.586 6.121 8.707a1 1 0 00-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-answer max-h-0 overflow-hidden text-gray-600 duration-500"
+            >
+              <p class="px-6 py-4">
+                Yes, the NovaFit is water-resistant and can be worn while
+                swimming.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="border-b border-gray-200">
+            <button
+              class="faq-question flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 focus:outline-none"
+            >
+              <span>Does the watch comes with a warranty?</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5 shrink-0 transition-transform duration-300"
+              >
+                <path
+                  d="M19.293 9.293a1 1 0 00-1.414 0L12 14.586 6.121 8.707a1 1 0 00-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-answer max-h-0 overflow-hidden text-gray-600 duration-500"
+            >
+              <p class="px-6 py-4">
+                Yes, the NovaFit Smartwatch comes with a one-year warranty.
+              </p>
+            </div>
+          </div>
+          <!-- Question 5 -->
+          <div class="border-b border-gray-200">
+            <button
+              class="faq-question flex w-full items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 focus:outline-none"
+            >
+              <span>How do I customize the watch faces?</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-5 shrink-0 transition-transform duration-300"
+              >
+                <path
+                  d="M19.293 9.293a1 1 0 00-1.414 0L12 14.586 6.121 8.707a1 1 0 00-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-answer max-h-0 overflow-hidden text-gray-600 duration-500"
+            >
+              <p class="px-6 py-4">
+                You can customize watch faces using the NovaFit app on your
+                smartphone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: CTA -->
+    <section id="cta" class="bg-teal-500 py-20">
+      <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+        <h2 class="mb-6 text-4xl font-bold">
+          Get Your NovaFit Smartwatch Today!
+        </h2>
+        <p class="mx-auto mb-8 max-w-screen-md text-lg">
+          Don't miss out on the ultimate fitness companion. Limited stock
+          available. Order now and start your journey to a healthier lifestyle.
+        </p>
+
+        <a
+          href="#"
+          class="rounded-full bg-white px-8 py-4 font-semibold text-teal-500 shadow-lg duration-300 hover:bg-gray-200"
+          >Buy Now</a
+        >
+      </div>
+    </section>
+
+    <!-- MARK: Footer -->
+    <footer class="bg-gray-800 py-10 text-gray-400">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <!-- Logo -->
+        <div class="mb-8 flex justify-center">
+          <a href="#" class="text-2xl font-bold text-white">NovaFit</a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div
+          class="mb-8 flex flex-col items-center justify-center gap-8 md:flex-row"
+        >
+          <a href="#" class="hover:text-white">About Us</a>
+          <a href="#" class="hover:text-white">Contact</a>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+
+        <!-- Social Media Links/Icons -->
+        <div class="mb-8 flex justify-center space-x-6">
+          <a href="#">
+            <!-- facebook -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6 hover:text-white"
+            >
+              <path
+                d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.4 3.56 8.04 8.21 8.88v-6.28h-2.47v-2.6h2.47v-1.96c0-2.44 1.49-3.78 3.67-3.78 1.04 0 1.94.08 2.2.11v2.55h-1.51c-1.18 0-1.41.56-1.41 1.38v1.8h2.82l-.37 2.6h-2.45v6.28c4.65-.84 8.21-4.48 8.21-8.88 0-5.5-4.46-9.96-9.96-9.96z"
+              />
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6 hover:text-white"
+            >
+              <path
+                d="M22.46 6c-.77.35-1.6.59-2.47.69.89-.53 1.56-1.38 1.88-2.4-.83.49-1.76.85-2.75 1.04-.78-.83-1.88-1.34-3.1-1.34-2.35 0-4.26 1.91-4.26 4.26 0 .33.04.65.11.96-3.54-.18-6.68-1.87-8.78-4.44-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.91 3.6-.71-.02-1.38-.22-1.97-.55v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.75.15-1.15.15-.28 0-.55-.03-.82-.07.56 1.76 2.17 3.04 4.09 3.08-1.5 1.17-3.38 1.87-5.43 1.87-.35 0-.7-.02-1.04-.06 1.94 1.24 4.26 1.96 6.75 1.96 8.1 0 12.53-6.71 12.53-12.53 0-.19-.01-.39-.02-.58.86-.62 1.61-1.4 2.2-2.28z"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-6 hover:text-white"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+
+          <!-- pinterest -->
+          <a href="#">
+            <svg
+              viewBox="0 0 960 1000"
+              fill="currentColor"
+              class="size-6 hover:text-white"
+            >
+              <path
+                d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980s-246.667-47-340-141S0 632 0 500c0-133.333 46.667-246.667 140-340S346.667 20 480 20m32 592c54.667 5.333 97.333-16 128-64s42-102 34-162c-6.667-48-31.333-84.667-74-110s-91.333-34.667-146-28c-44 5.333-83 24-117 56s-51.667 71.333-53 118c-2.667 66.667 20.667 105.333 70 116 6.667-16 9.667-27 9-33-.667-6-4-14-10-24s-9.667-19-11-27c-9.333-64 16.667-112 78-144s114-26 158 18c32 32 38.667 81.333 20 148s-51.333 95.333-98 86c-26.667-5.333-37.667-23.333-33-54 4.667-30.667 12.667-59.333 24-86s4.333-46.667-21-60c-28-12-49.667-1-65 33-15.333 34-15 63.667 1 89-2.667 13.333-9.667 41-21 83s-17.333 71-18 87c-.667 16-.333 48.667 1 98 34.667-25.333 60.667-82.667 78-172 30.667 20 52.667 30.667 66 32"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- contact information -->
+        <div class="mb-8 text-center">
+          <p class="mb-2">
+            Contact us:
+            <a
+              href="mailto:support@novafit.com"
+              class="text-teal-400 hover:underline"
+              >support@novafit.com</a
+            >
+          </p>
+          <p>123 Fitness Ave, Health City, Fitland</p>
+        </div>
+
+        <!-- copyright notice -->
+        <div class="text-center text-gray-600">
+          <p>&copy; 2024 NovaFit. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
