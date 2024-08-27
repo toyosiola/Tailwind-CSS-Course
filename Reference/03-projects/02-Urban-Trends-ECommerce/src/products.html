@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Urban Trends</title>
+    <!-- font awesome css -->
+    <link
+      rel="stylesheet"
+      href="./public/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- MARK: Navigation bar -->
+    <nav class="bg-white shadow-lg">
+      <div
+        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8"
+      >
+        <!-- Logo -->
+        <a
+          href="./index.html"
+          class="select-none text-xl font-bold text-primary"
+          >Urban Trends</a
+        >
+
+        <!-- search bar (hidden on mobile) -->
+        <div class="hidden md:block">
+          <input
+            type="search"
+            placeholder="Search products..."
+            class="w-60 rounded-lg border border-gray-300 p-2"
+          />
+        </div>
+
+        <!-- Nav-links (hidden on mobile) -->
+        <div
+          class="hidden gap-4 text-gray-700 hover:*:font-medium hover:*:text-primary hover:*:underline md:flex"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./products.html">Shop</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4 text-gray-700">
+          <!-- user profile -->
+          <div class="group relative">
+            <!-- user icon -->
+            <button class="size-6 hover:text-primary">
+              <i class="fa-user fa-regular"></i>
+            </button>
+
+            <div
+              class="pointer-events-none absolute -right-2 top-full translate-y-2 rounded-lg border-2 bg-white opacity-0 shadow-inner duration-500 group-hover:pointer-events-auto group-hover:-translate-y-1 group-hover:opacity-100"
+            >
+              <a
+                href="./login.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Login</a
+              >
+              <a
+                href="./wishlist.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Wishlist</a
+              >
+              <a
+                href="./dashboard.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Dashboard</a
+              >
+              <a
+                href="./order-history.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Orders</a
+              >
+              <a
+                href="./user-account.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Account</a
+              >
+            </div>
+          </div>
+
+          <!-- cart icon -->
+          <a href="./cart.html" class="">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <!-- menu button -->
+          <button
+            id="menu-toggle"
+            class="size-6 hover:text-primary focus:outline-none md:hidden"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="max-h-0 overflow-hidden border-t border-x-gray-200 bg-white duration-500 *:block *:px-4 *:py-2 *:text-gray-700 hover:*:bg-gray-100 md:hidden"
+      >
+        <a href="./index.html">Home</a>
+        <a href="./products.html">Shop</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="max-container gap-8 py-12 md:flex">
+      <!-- MARK: Sidebar filters -->
+      <aside class="mb-8 md:w-1/4 xl:w-1/5">
+        <h3 class="mb-4 text-xl font-semibold text-gray-800">Filters</h3>
+        <!-- category filter -->
+        <div class="mb-6">
+          <h4 class="mb-3 text-lg font-medium text-gray-700">Category</h4>
+          <ul class="space-y-2 *:text-gray-600 hover:*:text-gray-900">
+            <li><a href="#">Women's Clothing</a></li>
+            <li><a href="#">Men's Clothing</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Shoes</a></li>
+          </ul>
+        </div>
+
+        <!-- Price filter -->
+        <div class="mb-6">
+          <h4 class="mb-3 text-lg font-medium text-gray-700">Price</h4>
+          <input type="range" class="w-full" min="0" max="500" step="10" />
+          <div class="mt-2 flex justify-between text-sm text-gray-600">
+            <span>$0</span><span>$500</span>
+          </div>
+        </div>
+
+        <!-- color filter -->
+        <div class="mb-6">
+          <h4 class="mb-3 text-lg font-medium text-gray-700">Color</h4>
+          <div
+            class="flex gap-2 *:size-6 *:rounded-full *:border *:border-gray-200"
+          >
+            <button class="bg-red-500"></button
+            ><button class="bg-blue-500"></button
+            ><button class="bg-green-500"></button
+            ><button class="bg-yellow-500"></button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MARK: Main content -->
+      <main class="md:grow">
+        <div class="mb-6 items-center justify-between xs:flex">
+          <h3 class="text-xl font-semibold text-gray-800">Product Listings</h3>
+
+          <!-- sort dropdown -->
+          <select class="rounded-md border border-gray-300 p-2 text-gray-600">
+            <option>Sort by: Popularity</option>
+            <option>Sort by: Newest</option>
+            <option>Sort by: Price: Low to High</option>
+            <option>Sort by: Price: High to Low</option>
+          </select>
+        </div>
+
+        <!-- MARK: Product Grid -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Product card 1 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/classic-leather-jacket.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Classic Leather Jacket
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$129.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 2  -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/stylish-denim-jeans.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Stylish Denim Jeans
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$79.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 3 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/sporty-sneakers.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Sporty Sneakers
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$89.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 4 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/aviator-sunglasses.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Aviator Sunglasses
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$49.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 5 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/luxury-wristwatch.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Luxury Wristwatch
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$199.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 6 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/durable-backpack.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Durable Backpack
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$59.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 1 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/classic-leather-jacket.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Classic Leather Jacket
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$129.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 2  -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/stylish-denim-jeans.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Stylish Denim Jeans
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$79.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 3 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/sporty-sneakers.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Sporty Sneakers
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$89.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 4 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/aviator-sunglasses.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Aviator Sunglasses
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$49.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 5 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/luxury-wristwatch.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Luxury Wristwatch
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$199.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 6 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/durable-backpack.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Durable Backpack
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$59.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 1 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/classic-leather-jacket.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Classic Leather Jacket
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$129.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 2  -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/stylish-denim-jeans.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Stylish Denim Jeans
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$79.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 3 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/sporty-sneakers.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Sporty Sneakers
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$89.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 4 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/aviator-sunglasses.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Aviator Sunglasses
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$49.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 5 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/luxury-wristwatch.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Luxury Wristwatch
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$199.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+
+          <!-- Product card 6 -->
+          <div
+            class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+          >
+            <img
+              src="./public/images/durable-backpack.jpg"
+              alt="Leather jacket"
+              class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+            />
+            <div class="p-4">
+              <h4 class="text-lg font-semibold text-gray-800">
+                Durable Backpack
+              </h4>
+              <p class="mt-2 text-lg text-gray-600">$59.99</p>
+              <a
+                href="product-details.html"
+                class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+                >Quick View</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- MARK: Footer -->
+    <footer class="bg-gray-900 py-16 text-white">
+      <div class="max-container">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <!-- company info -->
+          <div>
+            <h2 class="text-2xl font-bold">Urban Trends</h2>
+            <p class="mt-4 text-gray-400">
+              Urban Trends offers the latest in fashion trends with high-quality
+              materials and modern designs. Our mission is to bring style and
+              comfort to everyone.
+            </p>
+            <p class="mt-4 text-gray-400">
+              &copy; 2024 Urban Trends. All rights reserved.
+            </p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Company</h3>
+            <ul class="mt-4 space-y-2 text-gray-400 hover:*:text-white">
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Support</h3>
+            <ul class="mt-4 space-y-2 text-gray-400 hover:*:text-white">
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./faq.html">FAQs</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Size Guide</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter & Social Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Stay Connected</h3>
+            <p class="mt-4 text-gray-400">
+              Subscribe to our newsletter to get the latest updates on new
+              arrivals and exclusive offers.
+            </p>
+            <form class="mt-4">
+              <input
+                type="email"
+                class="w-full rounded bg-gray-800 p-2 text-white outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                class="mt-4 w-full rounded bg-blue-500 py-2 font-semibold text-white duration-300 hover:bg-blue-600"
+              >
+                Subscribe
+              </button>
+            </form>
+
+            <!-- Social icons -->
+            <div
+              class="mt-8 flex justify-center gap-4 *:size-6 hover:*:text-white"
+            >
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

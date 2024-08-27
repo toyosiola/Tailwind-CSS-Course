@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | Urban Trends</title>
+    <!-- font awesome css -->
+    <link
+      rel="stylesheet"
+      href="./public/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <!-- swiper css -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/swiper@11.1.10/swiper-bundle.min.css
+"
+      rel="stylesheet"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- MARK: Navigation bar -->
+    <nav class="bg-white shadow-lg">
+      <div
+        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8"
+      >
+        <!-- Logo -->
+        <a
+          href="./index.html"
+          class="select-none text-xl font-bold text-primary"
+          >Urban Trends</a
+        >
+
+        <!-- search bar (hidden on mobile) -->
+        <div class="hidden md:block">
+          <input
+            type="search"
+            placeholder="Search products..."
+            class="w-60 rounded-lg border border-gray-300 p-2"
+          />
+        </div>
+
+        <!-- Nav-links (hidden on mobile) -->
+        <div
+          class="hidden gap-4 text-gray-700 hover:*:font-medium hover:*:text-primary hover:*:underline md:flex"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./products.html">Shop</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4 text-gray-700">
+          <!-- user profile -->
+          <div class="group relative">
+            <!-- user icon -->
+            <button class="size-6 hover:text-primary">
+              <i class="fa-user fa-regular"></i>
+            </button>
+
+            <div
+              class="pointer-events-none absolute -right-2 top-full translate-y-2 rounded-lg border-2 bg-white opacity-0 shadow-inner duration-500 group-hover:pointer-events-auto group-hover:-translate-y-1 group-hover:opacity-100"
+            >
+              <a
+                href="./login.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Login</a
+              >
+              <a
+                href="./wishlist.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Wishlist</a
+              >
+              <a
+                href="./dashboard.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Dashboard</a
+              >
+              <a
+                href="./order-history.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Orders</a
+              >
+              <a
+                href="./user-account.html"
+                class="block px-6 py-2 hover:bg-slate-200/70"
+                >Account</a
+              >
+            </div>
+          </div>
+
+          <!-- cart icon -->
+          <a href="./cart.html" class="">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <!-- menu button -->
+          <button
+            id="menu-toggle"
+            class="size-6 hover:text-primary focus:outline-none md:hidden"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="max-h-0 overflow-hidden border-t border-x-gray-200 bg-white duration-500 *:block *:px-4 *:py-2 *:text-gray-700 hover:*:bg-gray-100 md:hidden"
+      >
+        <a href="./index.html">Home</a>
+        <a href="./products.html">Shop</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- MARK: Product section -->
+    <section class="max-container py-12">
+      <div class="flex flex-col gap-8 md:flex-row">
+        <!-- product image carousel -->
+        <div class="md:w-2/5">
+          <!-- swiper -->
+          <div class="swiper-container mb-4 overflow-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket.jpg"
+                  alt="Classic Leather Jacket"
+                  class="w-full"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket-1.jpg"
+                  alt="Classic Leather Jacket"
+                  class="w-full"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket-2.jpg"
+                  alt="Classic Leather Jacket"
+                  class="w-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- thumbnails container -->
+          <div class="thumbs-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket.jpg"
+                  alt="Classic Leather Jacket"
+                  class="h-20 w-full cursor-pointer object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket-1.jpg"
+                  alt="Classic Leather Jacket"
+                  class="h-20 w-full cursor-pointer object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./public/images/classic-leather-jacket-2.jpg"
+                  alt="Classic Leather Jacket"
+                  class="h-20 w-full cursor-pointer object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product details -->
+        <div class="md:w-3/5">
+          <h2 class="text-2xl font-semibold text-gray-800">
+            Classic Leather Jacket
+          </h2>
+
+          <p class="mt-4 text-gray-600 md:max-w-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quam
+            a adipisci voluptate repellat vel mollitia ipsa ipsam placeat
+            delectus, recusandae similique, dolor obcaecati culpa aliquam
+            suscipit velit aperiam aut. Velit reprehenderit in harum tempora
+            autem nobis ex voluptatem alias. Fugit asperiores esse expedita
+            possimus sint dolorem quod modi numquam id ex consequuntur neque
+            repellendus enim aut voluptatibus eaque adipisci, aliquam
+            necessitatibus, itaque et rem sapiente! Repudiandae, repellat
+            temporibus facere iure consequatur animi explicabo nostrum
+            reprehenderit, saepe, rem tenetur error.
+          </p>
+          <p class="mt-6 text-3xl font-bold text-gray-800">$99.99</p>
+          <div class="mt-6 flex gap-4">
+            <input
+              type="number"
+              min="1"
+              value="1"
+              class="w-16 rounded-md border border-gray-300 text-center"
+            />
+            <button
+              class="rounded-md bg-blue-500 px-6 py-2 text-white transition duration-300 hover:bg-blue-600"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Customer Reviews -->
+    <section class="max-container py-12">
+      <h3 class="mb-2 text-2xl font-semibold text-gray-800">
+        Customer Reviews
+      </h3>
+
+      <!-- ratings -->
+      <div class="mb-2 flex items-center gap-2">
+        <!-- stars -->
+        <div class="flex items-center text-yellow-500">
+          <span>&starf;</span>
+          <span>&starf;</span>
+          <span>&starf;</span>
+          <span>&starf;</span>
+          <span>&starf;</span>
+        </div>
+
+        <p class="text-gray-600">4.5/5 (123 reviews)</p>
+      </div>
+
+      <!-- Reviews -->
+      <div class="space-y-8">
+        <!-- review 1 -->
+        <div class="space-y-2">
+          <h4 class="text-lg font-medium text-gray-800">Great Product!</h4>
+          <p class="text-gray-600">
+            I really loved this product. It met all my expectations and the
+            quality is excellent.
+          </p>
+          <p class="text-sm text-gray-500">- John Doe, 2 days ago</p>
+        </div>
+        <!-- review 2 -->
+        <div class="space-y-2">
+          <h4 class="text-lg font-medium text-gray-800">
+            Good value for money!
+          </h4>
+          <p class="text-gray-600">
+            The product offers great value for its price. I would definitely
+            recommend it to others.
+          </p>
+          <p class="text-sm text-gray-500">- Jane Smith, 1 week ago</p>
+        </div>
+      </div>
+
+      <!-- review input -->
+      <div class="mt-8">
+        <h4 class="mb-2 text-lg font-medium text-gray-800">Write a Review</h4>
+        <textarea
+          rows="6"
+          class="mb-4 w-full max-w-md rounded-md border border-gray-300 p-2"
+        ></textarea>
+        <button
+          class="block rounded-md bg-blue-500 px-6 py-2 text-white duration-300 hover:bg-blue-600"
+        >
+          Submit Review
+        </button>
+      </div>
+    </section>
+
+    <!-- Related products -->
+    <section class="max-container py-12">
+      <h3 class="mb-6 text-2xl font-semibold text-gray-800">
+        Related Products
+      </h3>
+
+      <!-- Related product list -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Product card 1 -->
+        <div
+          class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+        >
+          <img
+            src="./public/images/aviator-sunglasses.jpg"
+            alt="Leather jacket"
+            class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+          />
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800">
+              Aviator Sunglasses
+            </h4>
+            <p class="mt-2 text-lg text-gray-600">$49.99</p>
+            <a
+              href="product-details.html"
+              class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+              >Quick View</a
+            >
+          </div>
+        </div>
+
+        <!-- Product card 2 -->
+        <div
+          class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+        >
+          <img
+            src="./public/images/luxury-wristwatch.jpg"
+            alt="Leather jacket"
+            class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+          />
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800">
+              Luxury Wristwatch
+            </h4>
+            <p class="mt-2 text-lg text-gray-600">$199.99</p>
+            <a
+              href="product-details.html"
+              class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+              >Quick View</a
+            >
+          </div>
+        </div>
+
+        <!-- Product card 3 -->
+        <div
+          class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow"
+        >
+          <img
+            src="./public/images/durable-backpack.jpg"
+            alt="Leather jacket"
+            class="h-56 w-full object-cover duration-300 group-hover:opacity-75"
+          />
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800">
+              Durable Backpack
+            </h4>
+            <p class="mt-2 text-lg text-gray-600">$59.99</p>
+            <a
+              href="product-details.html"
+              class="mt-4 block rounded-lg bg-primary px-4 py-2 text-center text-white duration-300 hover:bg-primary-light"
+              >Quick View</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARK: Footer -->
+    <footer class="bg-gray-900 py-16 text-white">
+      <div class="max-container">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <!-- company info -->
+          <div>
+            <h2 class="text-2xl font-bold">Urban Trends</h2>
+            <p class="mt-4 text-gray-400">
+              Urban Trends offers the latest in fashion trends with high-quality
+              materials and modern designs. Our mission is to bring style and
+              comfort to everyone.
+            </p>
+            <p class="mt-4 text-gray-400">
+              &copy; 2024 Urban Trends. All rights reserved.
+            </p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Company</h3>
+            <ul class="mt-4 space-y-2 text-gray-400 hover:*:text-white">
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Support</h3>
+            <ul class="mt-4 space-y-2 text-gray-400 hover:*:text-white">
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./faq.html">FAQs</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Size Guide</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter & Social Links -->
+          <div>
+            <h3 class="text-lg font-semibold">Stay Connected</h3>
+            <p class="mt-4 text-gray-400">
+              Subscribe to our newsletter to get the latest updates on new
+              arrivals and exclusive offers.
+            </p>
+            <form class="mt-4">
+              <input
+                type="email"
+                class="w-full rounded bg-gray-800 p-2 text-white outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                class="mt-4 w-full rounded bg-blue-500 py-2 font-semibold text-white duration-300 hover:bg-blue-600"
+              >
+                Subscribe
+              </button>
+            </form>
+
+            <!-- Social icons -->
+            <div
+              class="mt-8 flex justify-center gap-4 *:size-6 hover:*:text-white"
+            >
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/swiper@11.1.10/swiper-bundle.min.js
+"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
