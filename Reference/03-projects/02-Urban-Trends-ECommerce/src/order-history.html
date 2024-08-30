@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Urban Trends</title>
+    <title>Order History | Urban Trends</title>
     <!-- font awesome css -->
     <link
       rel="stylesheet"
@@ -109,123 +109,157 @@
       </div>
     </nav>
 
-    <main class="max-container py-16">
-      <!-- company history -->
-      <section class="mb-12 text-gray-600">
-        <h2 class="mb-4 text-3xl font-bold text-gray-800">Our History</h2>
-        <p class="leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-          maxime magnam cumque quo, totam, a, numquam voluptatibus tenetur
-          possimus repellendus dignissimos repellat perspiciatis culpa doloribus
-          voluptatum ad laborum veritatis ipsam. Reprehenderit esse quod quae
-          impedit accusamus aut itaque corporis maxime vitae ratione iure eos
-          et, eaque laudantium ullam minima, sint fugiat natus? Totam
-          exercitationem quia nulla est, dolorum neque maiores.
-        </p>
-        <p class="leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-          maxime magnam cumque quo, totam, a, numquam voluptatibus tenetur
-          possimus repellendus dignissimos repellat perspiciatis culpa doloribus
-          voluptatum ad laborum veritatis ipsam. Reprehenderit esse quod quae
-          impedit accusamus aut itaque corporis maxime vitae ratione iure eos
-          et, eaque laudantium ullam minima, sint fugiat natus? Totam
-          exercitationem quia nulla est, dolorum neque maiores.
-        </p>
-      </section>
+    <main class="min-h-screen bg-gray-100">
+      <div class="max-container py-12">
+        <section class="rounded-lg bg-white p-8 shadow-lg">
+          <h2 class="mb-6 text-3xl font-semibold text-gray-800">
+            Order History
+          </h2>
 
-      <!-- Mission and Vision -->
-      <section class="mb-12">
-        <h2 class="mb-4 text-3xl font-bold text-gray-800">Mission & Vision</h2>
-        <div class="mb-6">
-          <h3 class="mb-2 text-2xl font-semibold text-gray-700">Our Mission</h3>
-          <ul class="list-disc pl-[revert] leading-relaxed text-gray-600">
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam,
-              nobis!
-            </li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam,
-              nobis!
-            </li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque.
-            </li>
-          </ul>
-        </div>
+          <!-- Order History Table -->
+          <div class="overflow-x-auto">
+            <table class="min-w-full border border-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    class="whitespace-nowrap px-6 py-3 text-left text-sm font-medium uppercase tracking-wider text-gray-700"
+                  >
+                    Order Id
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider text-gray-700"
+                  >
+                    Date
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider text-gray-700"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider text-gray-700"
+                  >
+                    total
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium uppercase tracking-wider text-gray-700"
+                  >
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white">
+                <tr>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    123456
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    Aug 13, 2024
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <span
+                      class="rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800"
+                      >Delivered</span
+                    >
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    $99.99
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <a
+                      href="order-details.html"
+                      class="font-medium text-teal-600 duration-200 hover:text-teal-800"
+                      >View Details</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    673456
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    Jul 28, 2024
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <span
+                      class="rounded-full bg-yellow-100 px-2 text-xs font-semibold leading-5 text-yellow-800"
+                      >Processing</span
+                    >
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    $99.99
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <a
+                      href="order-details.html"
+                      class="font-medium text-teal-600 duration-200 hover:text-teal-800"
+                      >View Details</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    873256
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    Jul 10, 2024
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <span
+                      class="rounded-full bg-red-100 px-2 text-xs font-semibold leading-5 text-red-800"
+                      >Cancelled</span
+                    >
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    $49.99
+                  </td>
+                  <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                    <a
+                      href="order-details.html"
+                      class="font-medium text-teal-600 duration-200 hover:text-teal-800"
+                      >View Details</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-        <div>
-          <h3 class="mb-2 text-2xl font-semibold text-gray-700">Our Vision</h3>
-          <ul class="list-disc pl-[revert] leading-relaxed text-gray-600">
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam,
-              nobis!
-            </li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam,
-              nobis!
-            </li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Team Members -->
-      <section>
-        <h2 class="mb-8 text-3xl font-bold text-gray-800">Meet Our Team</h2>
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Team member 1 -->
-          <div class="text-center">
-            <img
-              src="./public/images/avatar-1.jpg"
-              alt="Team member 1"
-              class="mx-auto mb-4 size-40 rounded-full object-cover"
-            />
-            <h4 class="text-xl font-semibold text-gray-800">John DOe</h4>
-            <p class="text-gray-600">CEO & Founder</p>
-            <p class="mt-2 text-gray-500">
-              John is a visionary leader with over 20 years of experience in the
-              industry. His dedication to excellence has been the driving force
-              behind our success.
-            </p>
+          <!-- MARK: Pagination -->
+          <div class="mt-6 flex justify-end">
+            <nav
+              class="inline-flex -space-x-px rounded-md font-medium text-gray-500 shadow-sm"
+              aria-label="Pagination"
+            >
+              <a
+                href="#"
+                class="rounded-l-md border border-gray-300 px-2 py-2 text-sm hover:bg-gray-50"
+                >Previous</a
+              >
+              <a
+                href="#"
+                class="z-10 border border-teal-500 bg-teal-50 px-4 py-2 text-sm text-teal-600"
+                >1</a
+              >
+              <a
+                href="#"
+                class="border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50"
+                >2</a
+              >
+              <a
+                href="#"
+                class="border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50"
+                >3</a
+              >
+              <a
+                href="#"
+                class="rounded-r-md border border-gray-300 px-2 py-2 text-sm hover:bg-gray-50"
+                >Next</a
+              >
+            </nav>
           </div>
-          <!-- Team member 2 -->
-          <div class="text-center">
-            <img
-              src="./public/images/avatar-2.jpg"
-              alt="Team member 1"
-              class="mx-auto mb-4 size-40 rounded-full object-cover"
-            />
-            <h4 class="text-xl font-semibold text-gray-800">Jane Smith</h4>
-            <p class="text-gray-600">Chief Operating Officer</p>
-            <p class="mt-2 text-gray-500">
-              Jane oversees our day-to-day operations, ensuring that our company
-              runs smoothly and efficiently. She is committed to maintaining the
-              highest standards in all aspects of our business.
-            </p>
-          </div>
-          <!-- Team member 3 -->
-          <div class="text-center">
-            <img
-              src="./public/images/avatar-3.png"
-              alt="Team member 3"
-              class="mx-auto mb-4 size-40 rounded-full object-cover"
-            />
-            <h4 class="text-xl font-semibold text-gray-800">Michael Brown</h4>
-            <p class="text-gray-600">Head of Marketing</p>
-            <p class="mt-2 text-gray-500">
-              Michael is the creative mind behind our marketing strategies. His
-              innovative approach has helped us build a strong brand presence in
-              the market.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <!-- MARK: Footer -->

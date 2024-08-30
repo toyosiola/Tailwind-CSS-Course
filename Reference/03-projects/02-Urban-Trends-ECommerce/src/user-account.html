@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout | Urban Trends</title>
+    <title>Account | Urban Trends</title>
     <!-- font awesome css -->
     <link
       rel="stylesheet"
@@ -109,39 +109,60 @@
       </div>
     </nav>
 
-    <main class="max-container py-12">
-      <!-- Billing and Shipping information -->
-      <section class="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <!-- MARK: billing information -->
-        <div>
-          <h2 class="mb-4 text-2xl font-bold text-gray-800">
-            Billing Information
+    <main class="min-h-screen bg-gray-100 py-12">
+      <div class="max-container">
+        <section class="rounded-lg bg-white p-8 shadow-lg">
+          <h2 class="mb-8 text-3xl font-semibold text-gray-800">
+            Account Details
           </h2>
-          <form class="space-y-4">
-            <div>
-              <label
-                for="name"
-                class="mb-1 block text-sm font-medium text-gray-700"
-                >Full Name</label
-              >
-              <input
-                type="text"
-                id="name"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
+
+          <form class="space-y-8">
+            <!-- name -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <label
+                  for="firstName"
+                  class="mb-1 block text-sm font-medium text-gray-700"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  value="John"
+                  class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="lastName"
+                  class="mb-1 block text-sm font-medium text-gray-700"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  value="Doe"
+                  class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
+                />
+              </div>
             </div>
+
+            <!-- email -->
             <div>
               <label
                 for="email"
                 class="mb-1 block text-sm font-medium text-gray-700"
-                >Email Address</label
+                >Email</label
               >
               <input
                 type="email"
                 id="email"
-                class="w-full rounded-md border border-gray-300 p-2"
+                value="john.doe@example.com"
+                class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
               />
             </div>
+
+            <!-- address -->
             <div>
               <label
                 for="phone"
@@ -151,232 +172,67 @@
               <input
                 type="text"
                 id="phone"
-                class="w-full rounded-md border border-gray-300 p-2"
+                value="+1 123 456 7890"
+                class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
               />
             </div>
+
+            <!-- address -->
             <div>
               <label
                 for="address"
                 class="mb-1 block text-sm font-medium text-gray-700"
                 >Address</label
               >
-              <input
-                type="text"
+              <textarea
                 id="address"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
+                rows="4"
+                class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
+              >
+123 Main Street, Apt 4B, New York, NY 10001</textarea
+              >
             </div>
-            <div class="flex gap-4 *:w-1/2">
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label
-                  for="city"
+                  for="newPassword"
                   class="mb-1 block text-sm font-medium text-gray-700"
-                  >City</label
+                  >New Password</label
                 >
                 <input
-                  type="text"
-                  id="city"
-                  class="w-full rounded-md border border-gray-300 p-2"
+                  type="password"
+                  id="newPassword"
+                  placeholder="******"
+                  class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
                 />
               </div>
               <div>
                 <label
-                  for="postal-code"
+                  for="confirmPassword"
                   class="mb-1 block text-sm font-medium text-gray-700"
-                  >Postal Code</label
+                  >Confirm Password</label
                 >
                 <input
-                  type="text"
-                  id="postal-code"
-                  class="w-full rounded-md border border-gray-300 p-2"
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="******"
+                  class="w-full rounded-md border-gray-300 px-4 py-2 shadow-md sm:text-sm"
                 />
               </div>
+            </div>
+
+            <div class="pt-6">
+              <button
+                type="submit"
+                class="w-full rounded-md bg-teal-600 px-6 py-3 text-white shadow-md duration-200 focus-within:ring-teal-200 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto"
+              >
+                Save Changes
+              </button>
             </div>
           </form>
-        </div>
-
-        <!-- MARK: shipping information -->
-        <div>
-          <h2 class="mb-4 text-2xl font-bold text-gray-800">
-            Shipping Information
-          </h2>
-
-          <form class="space-y-4">
-            <div class="flex items-center">
-              <input
-                type="checkbox"
-                id="same-address"
-                class="size-4 rounded border-gray-300"
-              />
-              <label for="same-address" class="ml-2 text-sm text-gray-700"
-                >Use same address for shipping</label
-              >
-            </div>
-
-            <div>
-              <label
-                for="name-shipping"
-                class="mb-1 block text-sm font-medium text-gray-700"
-                >Full Name</label
-              >
-              <input
-                type="text"
-                id="name-shipping"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-            </div>
-
-            <div>
-              <label
-                for="address-shipping"
-                class="mb-1 block text-sm font-medium text-gray-700"
-                >Address</label
-              >
-              <input
-                type="text"
-                id="address-shipping"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-            </div>
-
-            <div class="flex gap-4 *:w-1/2">
-              <div>
-                <label
-                  for="city-shipping"
-                  class="mb-1 block text-sm font-medium text-gray-700"
-                  >City</label
-                >
-                <input
-                  type="text"
-                  id="city-shipping"
-                  class="w-full rounded-md border border-gray-300 p-2"
-                />
-              </div>
-              <div>
-                <label
-                  for="postal-code-shipping"
-                  class="mb-1 block text-sm font-medium text-gray-700"
-                  >Postal Code</label
-                >
-                <input
-                  type="text"
-                  id="postal-code-shipping"
-                  class="w-full rounded-md border border-gray-300 p-2"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- payment and order summary -->
-      <section class="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <!-- MARK: Payment method -->
-        <div>
-          <h2 class="mb-4 text-2xl font-bold text-gray-800">Payment Method</h2>
-          <form class="space-y-4">
-            <div>
-              <label
-                for="card"
-                class="mb-1 block text-sm font-medium text-gray-700"
-                >Credit/Debit Card</label
-              >
-              <input
-                type="text"
-                id="card"
-                placeholder="Card Number"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-            </div>
-
-            <div class="flex gap-4 *:w-1/2">
-              <input
-                type="text"
-                placeholder="MM/YY"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-              <input
-                type="text"
-                placeholder="CVV"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-            </div>
-
-            <div>
-              <label
-                for="card-name"
-                class="mb-1 block text-sm font-medium text-gray-700"
-                >Name on Card</label
-              >
-              <input
-                type="text"
-                id="card-name"
-                class="w-full rounded-md border border-gray-300 p-2"
-              />
-            </div>
-          </form>
-        </div>
-
-        <!-- MARK: Order Summary -->
-        <div class="rounded-mg bg-gray-50 p-6 shadow-lg">
-          <h2 class="mb-4 text-2xl font-bold text-gray-800">Order Summary</h2>
-
-          <div class="space-y-4">
-            <!-- product summary -->
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-4">
-                <img
-                  src="./public/images/aviator-sunglasses.jpg"
-                  alt=""
-                  class="size-16 rounded-md object-cover"
-                />
-                <div class="">
-                  <h3 class="text-sm font-medium text-gray-800">
-                    Aviator Sunglasses
-                  </h3>
-                  <p class="text-sm text-gray-600">Qty:1</p>
-                </div>
-              </div>
-              <p class="text-sm font-medium text-gray-800">$49.99</p>
-            </div>
-
-            <!-- totals -->
-            <div class="space-y-2 border-t border-gray-200 pt-4">
-              <div
-                class="flex items-center justify-between text-sm font-medium text-gray-600"
-              >
-                <span>Subtotal</span>
-                <span>$49.99</span>
-              </div>
-              <div
-                class="flex items-center justify-between text-sm font-medium text-gray-600"
-              >
-                <span>Shipping</span>
-                <span>$8.00</span>
-              </div>
-              <div
-                class="flex items-center justify-between text-sm font-medium text-gray-600"
-              >
-                <span>Tax</span>
-                <span>$3.99</span>
-              </div>
-              <div
-                class="flex items-center justify-between text-lg font-bold text-gray-600"
-              >
-                <span>Total</span>
-                <span>$61.98</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- place order button -->
-          <button
-            class="mt-8 w-full rounded-md bg-teal-600 py-3 text-center font-medium text-white hover:bg-teal-700"
-          >
-            Place Order
-          </button>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <!-- MARK: Footer -->

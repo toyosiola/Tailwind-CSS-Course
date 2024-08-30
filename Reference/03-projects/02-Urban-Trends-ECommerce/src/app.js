@@ -17,8 +17,13 @@ menuToggle.addEventListener("click", function () {
   }),
 );
 
+function isHomePage() {
+  const path = window.location.pathname.replace(/\/+$/, "");
+  return path === "" || path === "/";
+}
+
 // Initialize swipper.js in home page
-if (window.location.pathname.endsWith("index.html")) {
+if (isHomePage()) {
   new Swiper(".swiper-container", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -44,7 +49,7 @@ if (window.location.pathname.endsWith("index.html")) {
 }
 
 // Handle accordion behavior in FAQ page
-if (window.location.pathname.endsWith("faq.html")) {
+if (window.location.pathname.includes("faq")) {
   function toggleFaq(id) {
     const faq = document.getElementById(`faq-${id}`);
     const icon = document.getElementById(`icon-${id}`);
@@ -63,7 +68,7 @@ if (window.location.pathname.endsWith("faq.html")) {
 }
 
 // Form toggle in Login page
-if (window.location.pathname.endsWith("login.html")) {
+if (window.location.pathname.includes("login")) {
   document.querySelectorAll(".form-toggle").forEach((el) =>
     el.addEventListener("click", (e) => {
       e.preventDefault();
@@ -74,7 +79,7 @@ if (window.location.pathname.endsWith("login.html")) {
 }
 
 // Initialize swipper.js in product-details page
-if (window.location.pathname.endsWith("product-details.html")) {
+if (window.location.pathname.includes("product-details")) {
   const thumbsSwiper = new Swiper(".thumbs-container", {
     slidesPerView: 3,
     spaceBetween: 10,
